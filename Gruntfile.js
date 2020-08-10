@@ -64,11 +64,20 @@ module.exports = (grunt) => {
             {
               match: /(webpackUniversalModuleDefinition.*?{).*?(}\)\(window,)/,
               replacement: '$1var a=factory();for(var i in a){_export(i,a[i]);}$2'
+            },
+            {
+              match: /window\.flatpickr/g,
+              replacement: 'flatpickr'
+            },
+            {
+              match: /(\(function \(global, factory\) {)[\s\S]+?(})/,
+              replacement: '$1\n_export(\'flatpickr\',factory());\n$2'
             }
           ]
         },
         files: [
-          {expand: true, flatten: true, src: ['dist/libs/jsoneditor.js'], dest: 'dist/libs/'}
+          {expand: true, flatten: true, src: ['dist/libs/jsoneditor.js'], dest: 'dist/libs/'},
+          {expand: true, flatten: true, src: ['dist/libs/flatpickr.js'], dest: 'dist/libs/'}
         ]
       }
     },

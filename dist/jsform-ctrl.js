@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['app/plugins/sdk', 'lodash', 'app/core/core', 'app/core/utils/kbn', './canvas/rendering', './options-editor', './css/jsform-panel.css!'], function (_export, _context) {
+System.register(['app/plugins/sdk', 'lodash', 'app/core/core', 'app/core/utils/kbn', './canvas/rendering', './options-editor', './css/jsform-panel.css!', './css/flatpickr.css!'], function (_export, _context) {
   "use strict";
 
   var MetricsPanelCtrl, _, contextSrv, kbn, canvasRendering, JsformOptionsEditor, _createClass, panelDefaults, JSFormCtrl;
@@ -48,7 +48,7 @@ System.register(['app/plugins/sdk', 'lodash', 'app/core/core', 'app/core/utils/k
       canvasRendering = _canvasRendering.default;
     }, function (_optionsEditor) {
       JsformOptionsEditor = _optionsEditor.JsformOptionsEditor;
-    }, function (_cssJsformPanelCss) {}],
+    }, function (_cssJsformPanelCss) {}, function (_cssFlatpickrCss) {}],
     execute: function () {
       _createClass = function () {
         function defineProperties(target, props) {

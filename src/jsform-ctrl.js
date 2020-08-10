@@ -6,6 +6,7 @@ import kbn from 'app/core/utils/kbn';
 import canvasRendering from './canvas/rendering';
 import { JsformOptionsEditor } from './options-editor';
 import './css/jsform-panel.css!';
+import './css/flatpickr.css!';
 
 const panelDefaults = {
   jsonSchema: '',

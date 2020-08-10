@@ -1,3 +1,4 @@
+import { flatpickr } from './flatpickr'
 /*!
  * /**
  * * @name JSON Editor
