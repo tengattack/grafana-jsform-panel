@@ -1,0 +1,59 @@
+.jsform-panel {
+  position: relative; }
+  .jsform-panel .json-editor > div[data-schemaid="root"] > h3, .jsform-panel .json-editor > div[data-schemaid="root"] > h3 + span {
+    display: none !important; }
+  .jsform-panel .json-editor .je-indented-panel {
+    border: none !important; }
+  .jsform-panel .json-editor .form-control {
+    margin-bottom: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    position: relative; }
+    .jsform-panel .json-editor .form-control label {
+      padding: 8px;
+      flex-shrink: 0;
+      font-weight: 500;
+      font-size: 12px;
+      background-color: #212327;
+      display: block;
+      height: 35px;
+      border: 1px solid #262628;
+      border-right: none;
+      border-radius: 3px 0 0 3px; }
+    .jsform-panel .json-editor .form-control input, .jsform-panel .json-editor .form-control select, .jsform-panel .json-editor .form-control textarea {
+      display: block;
+      width: 100%;
+      height: 35px;
+      padding: 8px;
+      font-size: 14px;
+      line-height: 18px;
+      color: #c7d0d9;
+      background-color: #0b0c0e;
+      background-image: none;
+      background-clip: padding-box;
+      border: 1px solid #262628;
+      border-radius: 0 3px 3px 0;
+      box-shadow: inset 1px 0 4px 0 rgba(150, 150, 150, 0.1);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+      .jsform-panel .json-editor .form-control input:focus, .jsform-panel .json-editor .form-control select:focus, .jsform-panel .json-editor .form-control textarea:focus {
+        border-color: #262628;
+        outline: none;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px #5794f2; }
+    .jsform-panel .json-editor .form-control select {
+      text-indent: .01px;
+      text-overflow: "";
+      padding-right: 32px;
+      appearance: none; }
+    .jsform-panel .json-editor .form-control textarea {
+      overflow: auto;
+      white-space: pre-wrap;
+      height: auto; }
+    .jsform-panel .json-editor .form-control .errmsg {
+      margin-left: 8px; }
+  .jsform-panel .editor-submit {
+    margin-top: 20px;
+    color: #000; }

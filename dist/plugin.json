@@ -1,0 +1,24 @@
+{
+  "type": "panel",
+  "name": "Json Schema Form",
+  "id": "grafana-jsform-panel",
+
+  "info": {
+    "description": "Json schema form panel plugin for grafana",
+    "author": {
+      "name": "tengattack"
+    },
+    "keywords": ["grafana", "json", "schema", "form", "panel"],
+    "version": "0.0.1",
+    "updated": "2020-07-19",
+    "logos": {
+      "small": "src/img/logo.svg",
+      "large": "src/img/logo.svg"
+    }
+  },
+
+  "dependencies": {
+    "grafanaVersion": "< 4.6",
+    "plugins": [ ]
+  }
+}

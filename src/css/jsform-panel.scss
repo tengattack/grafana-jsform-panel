@@ -1,0 +1,97 @@
+.jsform-panel {
+  position: relative;
+
+  .json-editor {
+    > div[data-schemaid="root"] {
+      > h3, > h3 + span {
+        // hide root header
+        display: none !important;
+      }
+    }
+    .je-indented-panel {
+      border: none !important;
+    }
+
+    .form-control {
+      margin-bottom: 2px;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: left;
+      position: relative;
+
+      label {
+        padding: 8px;
+        flex-shrink: 0;
+        font-weight: 500;
+        font-size: 12px;
+        background-color: #212327;
+        display: block;
+        height: 35px;
+        border: 1px solid #262628;
+        border-right: none;
+        border-radius: 3px 0 0 3px;
+      }
+
+      input, select, textarea {
+        display: block;
+        width: 100%;
+        height: 35px;
+        padding: 8px;
+        font-size: 14px;
+        line-height: 18px;
+        color: #c7d0d9;
+        background-color: #0b0c0e;
+        background-image: none;
+        background-clip: padding-box;
+        border: 1px solid #262628;
+        border-radius: 0 3px 3px 0;
+        box-shadow: inset 1px 0 4px 0 hsla(0,0%,58.8%,.1);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &:focus {
+          border-color: #262628;
+          outline: none;
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 5px #5794f2;
+        }
+      }
+
+      select {
+        text-indent: .01px;
+        text-overflow: "";
+        padding-right: 32px;
+        appearance: none;
+      }
+
+      textarea {
+        overflow: auto;
+        white-space: pre-wrap;
+        height: auto;
+      }
+
+      .errmsg {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .editor-submit {
+    margin-top: 20px;
+    color: #000;
+  }
+}
+
+.jsform-wrapper {
+  &.light {
+    .jsform-panel {
+
+    }
+  }
+
+  &.dark {
+    .jsform-panel {
+
+    }
+  }
+}

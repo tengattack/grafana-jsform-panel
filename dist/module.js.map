@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/module.js"],"names":["JSFormCtrl"],"mappings":";;;;;;;;AAASA,gB,eAAAA,U;;;2BAGPA,U","file":"module.js","sourcesContent":["import { JSFormCtrl } from './jsform-ctrl';\n\nexport {\n  JSFormCtrl as PanelCtrl\n};\n"]}
