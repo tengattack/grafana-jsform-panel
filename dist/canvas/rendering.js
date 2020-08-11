@@ -80,6 +80,22 @@ System.register(['lodash', 'app/core/core', 'jquery', '../libs/jsoneditor'], fun
         return;
       }
 
+      var uploadHandler = void 0;
+      if (ctrl.panel.uploadHandler) {
+        try {
+          uploadHandler = eval('(' + ctrl.panel.uploadHandler + ')');
+        } catch (e) {
+          $editor.html('Upload handler syntax error');
+          return;
+        }
+        if ((typeof uploadHandler === 'undefined' ? 'undefined' : _typeof(uploadHandler)) !== 'object') {
+          $editor.html('Upload handler should be an object');
+          return;
+        }
+      }
+      // Specify upload handler
+      JSONEditor.defaults.callbacks.upload = uploadHandler;
+
       $editor.html('');
       editor = new JSONEditor($editor[0], {
         disable_collapse: true,

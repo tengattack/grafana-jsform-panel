@@ -76,7 +76,9 @@ System.register(['app/plugins/sdk', 'lodash', 'app/core/core', 'app/core/utils/k
         formContentType: 'urlencoded',
         ajaxCredentials: false,
         ajaxSuccessPath: 'info',
-        ajaxFailurePath: 'info'
+        ajaxFailurePath: 'info',
+
+        uploadHandler: ''
       };
 
       _export('JSFormCtrl', JSFormCtrl = function (_MetricsPanelCtrl) {

@@ -25,10 +25,9 @@
         flex-shrink: 0;
         font-weight: 500;
         font-size: 12px;
-        background-color: #212327;
         display: block;
         height: 35px;
-        border: 1px solid #262628;
+        border: 1px solid transparent;
         border-right: none;
         border-radius: 3px 0 0 3px;
       }
@@ -40,20 +39,15 @@
         padding: 8px;
         font-size: 14px;
         line-height: 18px;
-        color: #c7d0d9;
-        background-color: #0b0c0e;
         background-image: none;
         background-clip: padding-box;
-        border: 1px solid #262628;
+        border: 1px solid transparent;
         border-radius: 0 3px 3px 0;
-        box-shadow: inset 1px 0 4px 0 hsla(0,0%,58.8%,.1);
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         &:focus {
-          border-color: #262628;
           outline: none;
-          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 5px #5794f2;
         }
       }
 
@@ -74,6 +68,26 @@
         margin-left: 8px;
       }
     }
+
+    // upload handler
+    .json-editor-btn-, .json-editor-btn-upload {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      line-height: 1;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      border: none;
+      height: 32px;
+      padding: 8px 16px;
+      font-size: 14px;
+      border-radius: 2px;
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+    }
   }
 
   .editor-submit {
@@ -85,13 +99,71 @@
 .jsform-wrapper {
   &.light {
     .jsform-panel {
+      label {
+        background-color: #dde4ed;
+        border-color: #dde4ed;
+      }
 
+      input, select, textarea {
+        color: #41444b;
+        background-color: #fff;
+        border: 1px solid #dde4ed;
+        box-shadow: inset 1px 0 4px 0 hsla(0,0%,58.8%,.1);
+        &:focus {
+          border-color: #dde4ed;
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 5px #5794f2;
+        }
+      }
+
+      // upload handler
+      .json-editor-btn-, .json-editor-btn-upload {
+        color: #fff;
+        text-shadow: 0 1px 0 rgba(0,0,0,.1);
+        background-color: #3ba856;
+        background-image: linear-gradient(180deg,#3eb15b,#369b4f);
+        background-repeat: repeat-x;
+        border-color: #3eb15b;
+        &:hover {
+          color: #fff;
+          background-image: none;
+          background-color: #3eb15b;
+        }
+      }
     }
   }
 
   &.dark {
     .jsform-panel {
+      label {
+        background-color: #212327;
+        border-color: #262628;
+      }
 
+      input, select, textarea {
+        color: #c7d0d9;
+        background-color: #0b0c0e;
+        border: 1px solid #262628;
+        &:focus {
+          border-color: #262628;
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 5px #5794f2;
+        }
+      }
+
+      // upload handler
+      .json-editor-btn-, .json-editor-btn-upload {
+        color: #d8d9da;
+        text-shadow: 0 1px 0 rgba(0,0,0,.1);
+        background-color: #2a2a2c;
+        background-image: linear-gradient(180deg,#262628,#303032);
+        background-repeat: repeat-x;
+        border-color: #262628;
+        box-shadow: -1px -1px 0 0 hsla(0,0%,100%,.1), 1px 1px 0 0 rgba(0,0,0,.3);
+        &:hover {
+          color: #d8d9da;
+          background-image: none;
+          background-color: #262628;
+        }
+      }
     }
   }
 }

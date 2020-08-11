@@ -17,6 +17,8 @@ const panelDefaults = {
   ajaxCredentials: false,
   ajaxSuccessPath: 'info',
   ajaxFailurePath: 'info',
+
+  uploadHandler: '',
 };
 
 export class JSFormCtrl extends MetricsPanelCtrl {
