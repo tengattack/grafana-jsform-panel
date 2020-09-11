@@ -9,7 +9,7 @@
       "name": "tengattack"
     },
     "keywords": ["grafana", "json", "schema", "form", "panel"],
-    "version": "0.0.3",
+    "version": "0.0.4",
     "updated": "2020-08-11",
     "logos": {
       "small": "src/img/logo.svg",
