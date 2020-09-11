@@ -14,6 +14,7 @@ const panelDefaults = {
   submitConfirmMsg: '',
   formActionUrl: '',
   formContentType: 'urlencoded',
+  refreshOnSuccess: true,
   ajaxCredentials: false,
   ajaxSuccessPath: 'info',
   ajaxFailurePath: 'info',

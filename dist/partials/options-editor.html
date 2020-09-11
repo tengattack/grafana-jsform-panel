@@ -37,6 +37,8 @@
       <input type="text" class="gf-form-input width-20" placeholder="" bs-tooltip="'Message path for failure response.'"
         ng-model="ctrl.panel.ajaxFailurePath" ng-change="ctrl.render()" ng-model-onblur>
     </div>
+    <gf-form-switch class="gf-form" label-class="width-10" label="Refresh On Success" checked="ctrl.panel.refreshOnSuccess" on-change="ctrl.render()">
+    </gf-form-switch>
   </div>
   <div class="section gf-form-group">
     <h5 class="section-heading">Upload Handler</h5>

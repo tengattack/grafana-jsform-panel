@@ -8,6 +8,8 @@ import { JSONEditor } from '../libs/jsoneditor';
 export default function link(scope, elem, attrs, ctrl) {
   let data, panel, timeRange, editor, context;
 
+  console.log('timeSrv', ctrl.timeSrv)
+
   const $panel = elem.find('.jsform-panel');
 
   updateJsonSchema();
@@ -143,6 +145,9 @@ export default function link(scope, elem, attrs, ctrl) {
           .text(message)
           .show();
         $submitBtn.prop('disabled', false);
+        if (ctrl.panel.refreshOnSuccess) {
+          ctrl.timeSrv.refreshDashboard()
+        }
       },
       error: function (xhr, ajaxOptions, thrownError) {
         let message = 'error';

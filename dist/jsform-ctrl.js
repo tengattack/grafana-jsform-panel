@@ -74,6 +74,7 @@ System.register(['app/plugins/sdk', 'lodash', 'app/core/core', 'app/core/utils/k
         submitConfirmMsg: '',
         formActionUrl: '',
         formContentType: 'urlencoded',
+        refreshOnSuccess: true,
         ajaxCredentials: false,
         ajaxSuccessPath: 'info',
         ajaxFailurePath: 'info',

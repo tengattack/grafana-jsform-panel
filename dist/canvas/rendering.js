@@ -12,6 +12,8 @@ System.register(['lodash', 'app/core/core', 'jquery', '../libs/jsoneditor'], fun
         editor = void 0,
         context = void 0;
 
+    console.log('timeSrv', ctrl.timeSrv);
+
     var $panel = elem.find('.jsform-panel');
 
     updateJsonSchema();
@@ -152,6 +154,9 @@ System.register(['lodash', 'app/core/core', 'jquery', '../libs/jsoneditor'], fun
           }
           $errmsg.css('color', 'green').text(message).show();
           $submitBtn.prop('disabled', false);
+          if (ctrl.panel.refreshOnSuccess) {
+            ctrl.timeSrv.refreshDashboard();
+          }
         },
         error: function error(xhr, ajaxOptions, thrownError) {
           var message = 'error';
