@@ -85,6 +85,8 @@ export default function link(scope, elem, attrs, ctrl) {
         return
       }
     }
+    // Specify template engine, translates to loadsh
+    JSONEditor.defaults.options.template = 'underscore'
     // Specify upload handler
     JSONEditor.defaults.callbacks.upload = uploadHandler
 

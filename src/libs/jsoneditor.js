@@ -1,4 +1,6 @@
+import _ from 'lodash'
 import { flatpickr } from './flatpickr'
+
 /*!
  * /**
  * * @name JSON Editor

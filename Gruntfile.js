@@ -72,6 +72,10 @@ module.exports = (grunt) => {
             {
               match: /(\(function \(global, factory\) {)[\s\S]+?(})/,
               replacement: '$1\n_export(\'flatpickr\',factory());\n$2'
+            },
+            {
+              match: /window\._/g,
+              replacement: '_',
             }
           ]
         },
