@@ -85,7 +85,7 @@ System.register(['app/plugins/sdk', 'lodash', 'app/core/core', 'app/core/utils/k
       _export('JSFormCtrl', JSFormCtrl = function (_MetricsPanelCtrl) {
         _inherits(JSFormCtrl, _MetricsPanelCtrl);
 
-        function JSFormCtrl($scope, $injector, $rootScope, timeSrv, variableSrv) {
+        function JSFormCtrl($scope, $injector, $rootScope, timeSrv /*, variableSrv */) {
           _classCallCheck(this, JSFormCtrl);
 
           var _this = _possibleConstructorReturn(this, (JSFormCtrl.__proto__ || Object.getPrototypeOf(JSFormCtrl)).call(this, $scope, $injector));
@@ -115,8 +115,9 @@ System.register(['app/plugins/sdk', 'lodash', 'app/core/core', 'app/core/utils/k
           _this.dataList = null;
           _this.data = {};
           _this.timeSrv = timeSrv;
-          _this.variableSrv = variableSrv;
-          _this.variableNames = _.map(variableSrv.variables, 'name');
+          // DISABLED FOR Grafana 7.x
+          // this.variableSrv = variableSrv;
+          // this.variableNames = _.map(variableSrv.variables, 'name');
           _this.theme = contextSrv.user.lightTheme ? 'light' : 'dark';
 
           _.defaultsDeep(_this.panel, panelDefaults);

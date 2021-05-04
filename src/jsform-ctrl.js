@@ -25,14 +25,15 @@ const panelDefaults = {
 export class JSFormCtrl extends MetricsPanelCtrl {
   static templateUrl = 'module.html';
 
-  constructor($scope, $injector, $rootScope, timeSrv, variableSrv) {
+  constructor($scope, $injector, $rootScope, timeSrv /*, variableSrv */) {
     super($scope, $injector);
 
     this.dataList = null;
     this.data = {};
     this.timeSrv = timeSrv;
-    this.variableSrv = variableSrv;
-    this.variableNames = _.map(variableSrv.variables, 'name');
+    // DISABLED FOR Grafana 7.x
+    // this.variableSrv = variableSrv;
+    // this.variableNames = _.map(variableSrv.variables, 'name');
     this.theme = contextSrv.user.lightTheme ? 'light' : 'dark';
 
     _.defaultsDeep(this.panel, panelDefaults);
